@@ -64,7 +64,7 @@
         "hora": "07:00",
         "estadio": "NACIONAL DE LUSAIL",
         "gols_mandante": "1",
-        "partida": "ARG x ARS",
+        "partida": "ARG x ARA",
         "gols_visitante": "2",
         "mandante": "argentina.png",
         "visitante": "arabia_saudita.png"
@@ -148,7 +148,7 @@
         "hora": "13:00",
         "estadio": "AL THUMAMA",
         "gols_mandante": "7",
-        "partida": "ESP x CRC",
+        "partida": "ESP x COS",
         "gols_visitante": "0",
         "mandante": "espanha.png",
         "visitante": "costa_rica.png"
@@ -302,7 +302,7 @@
         "hora": "10:00",
         "estadio": "CIDADE DA EDUCAÇÃO",
         "gols_mandante": "2",
-        "partida": "POL x ARS",
+        "partida": "POL x ARA",
         "gols_visitante": "0",
         "mandante": "polonia.png",
         "visitante": "arabia_saudita.png"
@@ -344,7 +344,7 @@
         "hora": "07:00",
         "estadio": "AL RAYYAN",
         "gols_mandante": "0",
-        "partida": "JAP x CRC",
+        "partida": "JAP x COS",
         "gols_visitante": "1",
         "mandante": "japao.png",
         "visitante": "costa_rica.png"
@@ -554,7 +554,7 @@
         "hora": "16:00",
         "estadio": "NACIONAL DE LUSAIL",
         "gols_mandante": "1",
-        "partida": "ARS x MEX",
+        "partida": "ARA x MEX",
         "gols_visitante": "2",
         "mandante": "arabia_saudita.png",
         "visitante": "mexico.png"
@@ -610,8 +610,8 @@
         "hora": "16:00",
         "estadio": "AL KHOR",
         "gols_mandante": "2",
-        "partida": "CRC x ALE",
-        "gols_visitante": "",
+        "partida": "COS x ALE",
+        "gols_visitante": "4",
         "mandante": "costa_rica.png",
         "visitante": "alemanha.png"
     },

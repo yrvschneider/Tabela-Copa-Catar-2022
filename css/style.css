@@ -61,6 +61,8 @@ table tr td {
     border: 1px solid #ccc;
     border-radius: 50%;
     line-height: 30px;
+    background-color: #fff;
+    color: #000;
 }
 
 .partida {
@@ -89,3 +91,49 @@ select {
     border-radius: 10px;
 }
 
+/* Formatação das Oitavas e Quartas */
+
+.divOitavas, .divQuartas {
+    /* border: 1px solid #fff; */
+    width: 90%;
+    margin-inline: auto;
+    margin-block: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.divOitavas > div, .divQuartas > div {
+    background: #ffffff70;
+    color: #000;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.jogo {
+    background: #ffffff99;
+    border-radius: 16px;
+    padding-block: 5px;
+    margin-block: 8px;
+}
+
+.dia {
+    background: #2c010f;
+    color: #fff;
+    border-radius: 18px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.hora {
+    background: #2c010f;
+    color: #fff;
+    border-radius: 18px;
+    padding: 5px;
+    font-size: 12px;
+}

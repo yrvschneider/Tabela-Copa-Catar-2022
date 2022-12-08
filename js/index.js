@@ -90,3 +90,98 @@ let selectLetra = document.querySelector('#letrasDosGrupos')
 selectLetra.addEventListener('change', (evento) => {
      exibirTabelaClassificao(evento.target.value)
 })
+
+// OITAVAS DE FINAL
+
+let divOitavas = document.querySelector('.divOitavas')
+
+fetch('./json/oitavas-de-final.json')
+.then(resposta => resposta.json())
+.then(dados => {
+
+    dados.forEach( jogo => {
+
+        //Criar uma nova divisoria
+        let divisoria = document.createElement('div')
+
+        //Colocar ela como filho de divOitavas
+        divOitavas.appendChild(divisoria)
+        
+        // Preencher os dados de cada jogo
+        divisoria.innerHTML = `
+            <h3 class='jogo'>Oitavas ${jogo.id}</h3>
+            <h4>
+                <span class='dia'>${jogo.diaSemana}</span>
+                ${jogo.data}
+                <span class='hora'>${jogo.hora}</span>
+            </h4>
+            <h4 class='centralizar jogo'>
+                <img class="imgP" src='./img/bandeiras/${jogo.img_mandante}' />
+                <span class='gols'>${jogo.gols_mandante}</span>
+                ${jogo.partida}
+                <span class='gols'>${jogo.gols_visitante}</span>
+                <img class="imgP" src='./img/bandeiras/${jogo.img_visitante}' />
+            </h4>
+            <h5>${jogo.estadio}</h5>
+            <h6>Prorrogação: ${jogo.prorrogacao}</h6>
+            <h6>Penaltis: ${jogo.penaltis}</h6>
+            <h6>Placar dos Penaltis: ${jogo.placar_penaltis}</h6>
+            <h6>Classificado: ${jogo.classificado}</h6>
+
+        `
+
+    })
+})
+
+// QUARTAS DE FINAL
+
+let divQuartas = document.querySelector('.divQuartas')
+
+fetch('./json/quartas-de-final.json')
+.then(resposta => resposta.json())
+.then(dados => {
+
+    dados.forEach( jogo => {
+
+        //Criar uma nova divisoria
+        let divisoria = document.createElement('div')
+
+        //Colocar ela como filho de divOitavas
+        divQuartas.appendChild(divisoria)
+        
+        // Preencher os dados de cada jogo
+        divisoria.innerHTML = `
+            <h3 class='jogo'>Quartas ${jogo.id}</h3>
+            <h4>
+                <span class='dia'>${jogo.diaSemana}</span>
+                ${jogo.data}
+                <span class='hora'>${jogo.hora}</span>
+            </h4>
+            <h4 class='centralizar jogo'>
+                <img class="imgP" src='./img/bandeiras/${jogo.img_mandante}' />
+                <span class='gols'>${jogo.gols_mandante}</span>
+                ${jogo.partida}
+                <span class='gols'>${jogo.gols_visitante}</span>
+                <img class="imgP" src='./img/bandeiras/${jogo.img_visitante}' />
+            </h4>
+            <h5>${jogo.estadio}</h5>
+            <!--<h6>Prorrogação: ${jogo.prorrogacao}</h6>
+            <h6>Penaltis: ${jogo.penaltis}</h6>
+            <h6>Placar dos Penaltis: ${jogo.placar_penaltis}</h6>
+            <h6>Classificado: ${jogo.classificado}</h6>-->
+
+        `
+
+    })
+})
+
+// // CONSUMIR API EXTERNA
+
+// fetch('https://worldcupjson.net/matches/tomorrow/?by_date=DESC')
+// .then(responta => responta.json())
+// .then(dados => {
+//     dados.forEach( jogo => {
+//         console.log(jogo)
+//         console.log(jogo.home_team_country + ' x ' + jogo.away_team_country)
+//     } )
+// })
