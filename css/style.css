@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #2c010f;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 16px;
+}
+
+table {
+    width: 90%;
+    background: #fff;
+    color: #000;
+    margin-inline: auto;
+    margin-block: 1rem;
+    border-radius: 8px;
+}
+
+table tr td, table tr th{
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+table tr:last-child td{
+    border: 0;
+}
+
+table tr td {
+    text-align: center;
+}
+
+.esquerda {
+    text-align: left;
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.imgP {
+    height: 30px;
+}
+
+.gols {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    line-height: 30px;
+}
+
+.partida {
+    width: 100px;
+}
+
+ /* Estilos da Classificação */
+
+ h2 {
+    text-align: center;
+ }
+
+.siglas {
+    text-align: center;
+    font-size: 12px;
+}
