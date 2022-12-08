@@ -36,26 +36,35 @@ fetch('./json/jogos-fase1.json')
 
 // Ler JSON das Classificações
 
-tabelaClassificacao = document.querySelector('.tabelaClassificacao')
+let tabelaClassificacao = document.querySelector('.tabelaClassificacao')
+let linhas = document.querySelectorAll('.corpoClassificao tr')
 
-fetch('./json/classificacaoGrupoG.json')
+exibirTabelaClassificao('A')
+
+function exibirTabelaClassificao(letraGrupo){
+
+    // Atualizar letra do Grupo no index.html
+    document.querySelector('.letra').innerHTML = letraGrupo
+
+    fetch(`./json/classificacaoGrupo${letraGrupo}.json`)
 .then(resposta => resposta.json())
-.then(dados => dados.forEach( selecao => {
-    console.log(selecao)
+.then(dados => {
 
-    // Ordernar os dados do Array
-    dados.sort(function compararNumeros(a, b){
-        return a.posicao - b.posicao
-    })
+        // Ordernar os dados do Array
+        dados.sort(function compararNumeros(a, b){
+            return a.posicao - b.posicao
+        })
+
+    dados.forEach( (selecao, indice) => {
 
     // Criar Linha tr
-    let linha = document.createElement('tr')
+    // let linha = document.createElement('tr')
 
     // Colocar ela como filho dentro da tabela
-    tabelaClassificacao.appendChild(linha)
+    // tabelaClassificacao.appendChild(linha)
 
     // Preencher os dados
-    linha.innerHTML = `
+    linhas[indice].innerHTML = `
     <td>${selecao.posicao}</td>
     <td>${selecao.selecao}</td>
     <td>${selecao.pontos}</td>
@@ -67,4 +76,17 @@ fetch('./json/classificacaoGrupoG.json')
     <td>${selecao.gols_contra}</td>
     <td>${selecao.saldo_de_gols}</td>
     `
-}))
+})
+}
+)
+}
+
+// exibirTabelaClassificao('G')
+
+// Controlar a escolha da letra do grupo para exibir na tabela de classificação
+let selectLetra = document.querySelector('#letrasDosGrupos')
+
+// Usar um escutador de eventos para a nossa caixa select
+selectLetra.addEventListener('change', (evento) => {
+     exibirTabelaClassificao(evento.target.value)
+})

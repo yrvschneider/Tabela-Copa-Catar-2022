@@ -77,3 +77,15 @@ table tr td {
     text-align: center;
     font-size: 12px;
 }
+
+.formulario {
+    width: 90%;
+    text-align: center;
+    margin-top: 8px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+}
+
